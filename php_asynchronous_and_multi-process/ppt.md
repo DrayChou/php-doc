@@ -11,11 +11,63 @@ files: /js/demo.js,/css/demo.css
 [slide]
 
 # 常用的实现方式 {:&.flexbox.vleft}
+## Ajax
+## Popen
+## Curl
 ## Fsock
 ## Fork
 ## curl_multi_init 
 ## 协程
 ## Swoole
+
+[slide]
+
+# Ajax
+
+1. 前端通过 Ajax 请求后台执行操作。
+```
+$.getJSON("uri", params, function(result) {
+    do_something_with_data(result);
+});
+```
+2. 返回 img 或 script 地址到前端，等待前端加载。
+```
+<img src="uri" alt="">
+<script src="/javascripts/application.js" type="text/javascript" charset="utf-8"></script>
+```
+
+
+[slide]
+
+# Popen
+
+```
+pclose(popen("/home/xinchen/backend.php &", 'r'));
+```
+
+不能通过HTTP协议请求另外的一个WebService，只能执行本地的脚本文件。并且只能单向打开，无法传大量参数给被调用脚本。
+并且如果，访问量很高的时候，会产生大量的进程。如果使用到了外部资源，还要自己考虑竞争。
+
+[slide]
+
+# Curl
+
+```
+$ch = curl_init();
+
+$curl_opt = array(
+                CURLOPT_URL,
+                'http://www.example.com/backend.php',
+                CURLOPT_RETURNTRANSFER, 1,
+                CURLOPT_TIMEOUT, 1,
+            );
+
+curl_setopt_array($ch, $curl_opt);
+curl_exec($ch);
+curl_close($ch);
+```
+
+这个方法，设置CUROPT_TIMEOUT为1（最小为1，郁闷）。也就是说，客户端至少必须等待1秒钟。
 
 [slide]
 
@@ -173,6 +225,7 @@ if ($pid) {
 ```
 # 定时任务系统
 # * * * * * /usr/bin/php /home/vagrant/Code/hiweixiu/branch/hiweixiu.com/yii job/run >/dev/null 2>&1
+
 # * * * * * for i in `seq 120`; do /usr/bin/php /home/vagrant/www/hiweixiu/branch/hiweixiu.com/yii job/run & sleep 0.5; done
 ```
 
