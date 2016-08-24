@@ -167,6 +167,15 @@ if ($pid) {
 }
 ```
 
+[slide]
+# Fork
+
+```
+# 定时任务系统
+# * * * * * /usr/bin/php /home/vagrant/Code/hiweixiu/branch/hiweixiu.com/yii job/run >/dev/null 2>&1
+# * * * * * for i in `seq 120`; do /usr/bin/php /home/vagrant/www/hiweixiu/branch/hiweixiu.com/yii job/run & sleep 0.5; done
+```
+
 [PHP多进程编程初步](https://www.pureweber.com/article/php-multi-process-programming-preview/)
 
 [slide]
