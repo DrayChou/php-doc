@@ -500,8 +500,6 @@ $serv->start();
 
 [slide]
 
-PPT 地址 https://github.com/DrayChou/php-doc
+PPT: https://github.com/DrayChou/php-doc
 
-nodeppt 是基于nodejs写的支持 **Markdown!** 语法的网页PPT，当前版本：1.4.2
-
-Github：https://github.com/ksky521/nodePPT
+nodeppt: https://github.com/ksky521/nodePPT
