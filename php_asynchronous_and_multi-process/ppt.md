@@ -11,7 +11,7 @@ files: /js/demo.js,/css/demo.css
 [slide]
 
 # 常用的实现方式 {:&.flexbox.vleft}
-## Fscok
+## Fsock
 ## Fork
 ## curl_multi_init 
 ## 协程
@@ -19,7 +19,7 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 
-# Fscok
+# Fsock
 
 ```php
 /**
@@ -117,7 +117,7 @@ public static function callUrl($url, $param = array(), $is_wait = false, $cookie
     return $res;
 }
 ```
-[使用fscok实现异步调用PHP](http://www.laruence.com/2008/04/16/98.html)
+[使用Fsock实现异步调用PHP](http://www.laruence.com/2008/04/16/98.html)
 
 [slide]
 # Fork
