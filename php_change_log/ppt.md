@@ -6,7 +6,9 @@ files: /js/demo.js,/css/demo.css
 
 [slide]
 
-截至目前，PHP的最新稳定版本是PHP5.6，我们现在用的是 php5.4。
+PHP的最新稳定版本是PHP5.6，最新版为 7.1。
+
+我们现在用的是 php5.4。
 
 [slide]
 
